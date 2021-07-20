@@ -1,0 +1,48 @@
+#container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 500px;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+    ), url(https://www.pointproperties.org/wp-content/uploads/2021/05/5-questions-students-should-ask-when-apartment-hunting.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-style: bold;
+    background-color: #f4f4f4;
+    color: white;
+    font-size: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    font-size: 20px;
+}
+
+#add_apart {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.form_comps {
+    display: flex;
+    justify-content: center
+}
+
+.form_comps1 {
+    padding-right: 50px;
+}
+
+.heading {
+    padding-left: 10px;
+}
+
+.django_form {
+    margin-top: 30px;
+}
