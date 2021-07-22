@@ -32,17 +32,14 @@
 
 .form_comps {
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
 
-.form_comps1 {
-    padding-right: 50px;
-}
 
 .heading {
     padding-left: 10px;
 }
 
 .django_form {
-    margin-top: 30px;
+    padding-top: 30px;
 }

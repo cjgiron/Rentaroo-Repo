@@ -22,13 +22,29 @@
             <input type="text" name="search" placeholder="search"/>
         </form>
     </div>
-    <form class="django_form" action="/your-city/" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
-    </form>
     <h2 id="add_apart">Add an Apartment Listing</h2>
-    <div class="main">
+    <form class="django_form" action="/create_listing" method="post">
+        {% csrf_token %}
+        <div class="form_comps">
+            <div class="form_comps1">
+                <p id="city" >City: {{ form.city }}</p>
+                <p id="street_address">Street Address: {{ form.street_address }}</p>
+                <p id="apartment_img">Apartment Image: {{ form.apartment_img }}</p>
+                <p id="monthly_rent">Monthly Rent: {{ form.monthly_rent }}</p>
+                <p id="renovated">Renovated: {{ form.renovated }}</p>
+            </div>
+            <div class="form_comps2">
+                <p id="air_conditioning">Air Conditioning: {{ form.air_conditioning }}</p>
+                <p id="pool">Pool: {{ form.pool }}</p>
+                <p id="allows_pets">Allows Pets: {{ form.allows_pets }}</p>
+                <p id="laundry_onsite">Laundry Onsite: {{ form.laundry_onsite }}</p>
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+    <a href="/all_apartments">See All Apartments</a>
+    
+    <!-- <div class="main">
         <form class="form-group form_comps" action="/create-apartment" method="post">
             <div class="form_comps1">
                 <div>
@@ -81,7 +97,7 @@
                     <input type="radio" name="laundry_onsite" id="no" value="0">
                 </div>
             </div>
-        </form>
-    </div>
+        </form> 
+    </div>-->
 </body>
 </html>

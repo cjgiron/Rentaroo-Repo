@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/all_apartments.css'%}">
+    <title>Document</title>
+</head>
+<body>
+    {% for apartment in apartments %}
+        <div class="card">
+            <img src="{{ apartment.apartment_img.url }}" alt="apartment" style="width:100%">
+            <div class="container">
+                <p>City: {{ apartment.city }}</p>
+                <p>Street Address: {{ apartment.street_address }}</p>
+                <p>Monthly Rent: {{ apartment.monthly_rent }}</p>
+                <p>Renovated: {{ apartment.renovated }}</p>
+                <p>Air Conditioning: {{ apartment.air_conditioning }}</p>
+                <p>Pool: {{ apartment.pool }}</p>
+                <p>Allows Pets: {{ apartment.allows_pets }}</p>
+                <p>Laundry Onsite: {{ apartment.laundry_onsite }}</p>
+            </div>
+        </div> 
+    {% endfor %}
+</body>
+</html>
