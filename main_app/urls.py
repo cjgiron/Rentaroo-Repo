@@ -7,5 +7,7 @@ urlpatterns = [
     path('create_listing', views.create_listing),
     path('all_apartments', views.all_apartments),
     path('login_process', views.login_process),
-    path('register_process', views.register_process),	   
+    path('register_process', views.register_process),
+    path('search_cities', views.search_cities, name="search-cities"),
+    path('logout', views.logout),	   
 ]

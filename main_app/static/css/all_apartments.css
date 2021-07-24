@@ -3,6 +3,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     display: inline-block;
+    width: 5rem;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -11,6 +12,15 @@
 }
 
 /* Add some padding inside the card container */
-.container {
-    padding: 2px 16px;
+.content{
+    padding: 15px 15px 0px 25px;
+}
+
+img {
+    width: 100%;
+    height: 50%;
+}
+
+.cards {
+    display: flex;
 }

@@ -1,0 +1,23 @@
+footer {
+    background-color: rgb(243, 127, 98);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.socials {
+    text-align: center;
+}
+
+.bi {
+    color: black;
+}
+
+.socials a {
+    text-decoration: none;
+}
+
+.contact_info {
+    margin-right: 100px;
+}

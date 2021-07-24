@@ -16,10 +16,11 @@
 <body>
     {% include "navbar.html" %}
     <div id="container">
-        <form class="form" action="/cities" method="POST" enctype="multipart/form-data">
+        <form class="form" action="{% url 'search-cities' %}" method="POST">
             {% csrf_token %}
-            <label for="search">Enter a city name:</label>
-            <input type="text" name="search" placeholder="search"/>
+            <label for="searched">Enter a city name:</label>
+            <input type="text" id="searched" name="searched" placeholder="search"/>
+            <button type="submit">Search</button>
         </form>
     </div>
     <h2 id="add_apart">Add an Apartment Listing</h2>
@@ -42,8 +43,10 @@
             </div>
         </div>
     </form>
-    <a href="/all_apartments">See All Apartments</a>
-    
+    <div class="see_all">
+        <a class="btn btn-success btn-lg" href="/all_apartments">See All Apartments</a>
+    </div>
+    {% include "footer.html" %}
     <!-- <div class="main">
         <form class="form-group form_comps" action="/create-apartment" method="post">
             <div class="form_comps1">
@@ -99,5 +102,6 @@
             </div>
         </form> 
     </div>-->
+
 </body>
 </html>

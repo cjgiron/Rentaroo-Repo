@@ -43,3 +43,9 @@
 .django_form {
     padding-top: 30px;
 }
+
+.see_all {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

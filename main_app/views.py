@@ -14,32 +14,16 @@ def thanks(request):
 
 
 def home(request):
+    if "user_id" not in request.session:
+        return redirect('/')
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = ApartmentForm(request.POST)
         # check whether it's valid:
-        if form.is_valid():
-            print(request.POST)
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            Apartment.objects.create(
-                city = request.POST['city'],
-                street_address = request.POST['street_address'],
-                apartment_img = request.POST['apartment_img'],
-                monthly_rent = request.POST['monthly_rent'],
-                renovated = request.POST['renovated'],
-                air_conditioning = request.POST['air_conditioning'],
-                pool = request.POST['pool'],
-                allows_pets = request.POST['allows_pets'],
-                laundry_onsite = request.POST['laundry_onsite']
-            )
-            return HttpResponseRedirect('/thanks/')
 
     # if a GET (or any other method) we'll create a blank form
     else:
-        print(request.POST)
         form = ApartmentForm()
 
     return render(request, 'home.html', {'form': form})
@@ -109,3 +93,15 @@ def all_apartments(request):
         'apartments': apartments
     }
     return render(request, 'all_apartments.html', context)
+
+def search_cities(request):
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        apartments = Apartment.objects.filter(city__contains=searched)
+        return render(request, "search_cities.html", {'searched': searched, 'apartments': apartments})
+    else:
+        return redirect('/home')
+
+def logout(request):
+    request.session.flush()
+    return redirect('/')
