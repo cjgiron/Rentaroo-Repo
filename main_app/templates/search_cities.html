@@ -15,7 +15,8 @@
 <body>
     {% include 'navbar.html' %}
     <div class="container-fluid">
-        {% for apartment in apartments %}
+    {% if apartments %}
+    {% for apartment in apartments %}
         <div class="row">
             <div class="col-sm"></div>
                 <div class="card">
@@ -29,11 +30,16 @@
                         <p>Pool: {{ apartment.pool }}</p>
                         <p>Allows Pets: {{ apartment.allows_pets }}</p>
                         <p>Laundry Onsite: {{ apartment.laundry_onsite }}</p>
+                        <p>Contact Number: {{ apartment.contact_number }}</p>
                     </div>
                 </div> 
             </div> 
         </div>
     {% endfor %}
+    {% else %}
+    <h1 style="height: 500px; margin-top: 20px;">There are no listings for the city you searched for :(</h1>
+    {% endif %}
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>

@@ -1,9 +1,11 @@
 
-<nav class="navbar" style="display: flex; justify-content: space-between">
+<nav class="navbar" style="display: flex; justify-content: space-between;">
     <div style="display: flex; justify-content: left">
         <h1 class="heading">Rentaroo.com</h1>
         <div class="right" style="margin-left: 25px; margin-top: 15px;">
+            {% if session.user_id %}
             <a href="/">Login or Register</a>
+            {% endif %}
             <a href="/home">Home</a>
         </div>
     </div>

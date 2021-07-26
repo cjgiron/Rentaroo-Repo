@@ -40,7 +40,8 @@ def create_listing(request):
         air_conditioning = True if request.POST.get('air_conditioning') else False,
         pool = True if request.POST.get('pool') else False,
         allows_pets = True if request.POST.get('allows_pets') else False,
-        laundry_onsite = True if request.POST.get('laundry_onsite') else False
+        laundry_onsite = True if request.POST.get('laundry_onsite') else False,
+        contact_number = request.POST['contact_number'],
     )
     
     return redirect('/all_apartments')

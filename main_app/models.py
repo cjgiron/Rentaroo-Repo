@@ -12,6 +12,7 @@ class Apartment(models.Model):
     pool = models.BooleanField(default=False)
     allows_pets = models.BooleanField(default=False)
     laundry_onsite = models.BooleanField(default=False)
+    contact_number = models.CharField(max_length=12, null=True, blank=True)
 
     def __str__ (self): 
         return self.street_address

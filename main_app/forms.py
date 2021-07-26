@@ -11,6 +11,7 @@ class ApartmentForm(forms.Form):
     pool = forms.BooleanField(required=False)
     allows_pets = forms.BooleanField(required=False)
     laundry_onsite = forms.BooleanField(required=False)
+    contact_number = forms.CharField(required=False, max_length=12)
 
 
 
