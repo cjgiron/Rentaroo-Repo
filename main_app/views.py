@@ -29,12 +29,11 @@ def home(request):
     return render(request, 'home.html', {'form': form})
 
 def create_listing(request):
-
     
-    Apartment.objects.create(
+    new = Apartment.objects.create(
         city = request.POST['city'],
         street_address = request.POST['street_address'],
-        apartment_img = request.POST['apartment_img'],
+        apartment_img = request.FILES['apartment_img'],
         monthly_rent = request.POST['monthly_rent'],
         renovated = True if request.POST.get('renovated') else False,
         air_conditioning = True if request.POST.get('air_conditioning') else False,
@@ -43,7 +42,9 @@ def create_listing(request):
         laundry_onsite = True if request.POST.get('laundry_onsite') else False,
         contact_number = request.POST['contact_number'],
     )
-    
+    print(f'{new.apartment_img = }')
+    print(f'{new.apartment_img.name = }')
+    print(f'{new.apartment_img.url = }')
     return redirect('/all_apartments')
 
 

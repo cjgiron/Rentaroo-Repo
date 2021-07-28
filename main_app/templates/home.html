@@ -24,7 +24,7 @@
         </form>
     </div>
     <h2 id="add_apart">Add an Apartment Listing</h2>
-    <form class="django_form" action="/create_listing" method="post">
+    <form class="django_form" action="/create_listing" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form_comps">
             <div class="form_comps1">
