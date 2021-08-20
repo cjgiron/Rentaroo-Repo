@@ -8,7 +8,7 @@ The homepage features a search button that filters listings by city.
 
 ![alt text](https://github.com/cjgiron/Rentaroo-Repo/blob/main/images/Screen%20Shot%202021-08-19%20at%209.18.25%20PM.png?raw=true)
 
-Here is an example of a Django Form, users can add new listings as they please. This form requires submission of an image.
+Here is an example of a Django Form, users can add new listings as they please. This form requires submission of an image. Notice my footer contains my contact information.
 
 ![alt text](https://github.com/cjgiron/Rentaroo-Repo/blob/main/images/Screen%20Shot%202021-08-19%20at%209.26.37%20PM.png?raw=true)
 
